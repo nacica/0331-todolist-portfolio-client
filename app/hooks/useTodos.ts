@@ -6,7 +6,8 @@ async function fetcher(key: string) {
 
 export const useTodos =()=>{
         const { data, isLoading, error, mutate } = useSWR( 
-        "http://localhost:8000/allTodos", 
+        // "http://localhost:8000/allTodos", 
+        process.env.NEXT_PUBLIC_API_URL + "allTodos",
         fetcher);
 
         return {
