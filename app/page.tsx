@@ -17,8 +17,8 @@ export default function Home() {
     e.preventDefault();
 
 
-    const response = await fetch(`http://localhost:8000/createTodo`, {
-    // const response = await fetch(`${API_URL}/createTodo`, {
+    // const response = await fetch(`http://localhost:8000/createTodo`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/createTodo`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ 
