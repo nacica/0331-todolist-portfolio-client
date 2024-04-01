@@ -18,7 +18,7 @@ const Todo = ({todo}:TodoProps) => {
     const handleEdit = async () => {
         setEditing(!editing)
         if (editing) {
-          // const response = await fetch(`http://localhost:8000/editTodo/${todo.id}`, {
+       // const response = await fetch(`http://localhost:8000/editTodo/${todo.id}`, {
           const response = await fetch(`${API_URL}/editTodo/${todo.id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
